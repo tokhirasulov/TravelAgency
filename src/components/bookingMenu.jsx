@@ -11,13 +11,7 @@ import ThingsToDo from './bookingEl/ThingsToDo';
 
 const BookingMenu = () => {
     const [active, setActive] = useState("Cars")
-    const [data,setData] = useState()
-    const url = 'http://test.api.amadeus.com/shopping/flight-offers/oLRcNG7WnGjcmqvWBogMtd80cr8jlxIH'
-    useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(result => setData(result))
-    },[])
+
     console.log(data)
         return(
             <div className={style.booking}>
