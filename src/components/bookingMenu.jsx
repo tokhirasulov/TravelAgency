@@ -12,7 +12,6 @@ import ThingsToDo from './bookingEl/ThingsToDo';
 const BookingMenu = () => {
     const [active, setActive] = useState("Cars")
 
-    console.log(data)
         return(
             <div className={style.booking}>
             <header className={style.header}>
@@ -40,18 +39,3 @@ export default BookingMenu
 
 
 
-
-  // useEffect(() => {
-    //     const url = `https://travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com/v1/prices/direct/?destination=${toVal}&origin=${fromVal}`;
-    //     const options = {
-    //         method: 'GET',
-    //         headers: {
-    //             'X-Access-Token': '3302a067ced8bafa9c736d205cbec6ba',
-    //             'X-RapidAPI-Key': 'b050454057msh90861deb90fecabp18583ejsnfc21272c8ac1',
-	// 	        'X-RapidAPI-Host': 'travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com'
-	//     }
-    // };
-    // fetch(url, options)
-    //     .then(res => res.text())
-    //     .then(result => setData(result))
-    // },[data])
