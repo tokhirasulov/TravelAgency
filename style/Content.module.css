@@ -1,0 +1,129 @@
+.content{
+    background-color: #222831;
+    font-family: Poppins;
+    padding: 19rem 6.25rem 7.5rem;;
+    padding-top: 19rem;
+    background-color: #222831;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 34px;
+    grid-row-gap: 34px;
+    margin-top: 3rem;
+}
+
+.travelImg{position: relative; width: 100%; height: 100%;}
+
+.travelImg img{width: 100%; height: 100%;}
+
+.imgContainer1{grid-area: 1 / 1 / 2 / 3;}
+
+.imgContainer2{grid-area: 1 / 3 / 3 / 4;}
+
+.imgContainer3{grid-area: 1 / 4 / 3 / 5; }
+
+.imgContainer4{grid-area: 2 / 1 / 3 / 2;}
+
+.imgContainer5{grid-area: 2 / 2 / 3 / 3;}
+
+.imgDesc{
+    position: absolute;
+
+    bottom: 15%;
+    left: 10%;
+}
+.imgDesc h3{
+    font-size: 22px;
+}
+.imgDesc p{
+    font-size: 11px;
+}
+
+
+.dowloadRef{
+    margin-top: 6.25rem;
+    font-family: Montserrat;
+}
+
+.dowloadRef h1{
+    font-weight: 600;
+    text-align: center;
+}
+
+.digStore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+@media(max-width:992px){
+    .imgDesc{
+        left: 5%;
+        bottom: 5%;
+    }
+}
+
+@media(max-width:768px){
+    .container{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .travelImg img{width: 80%;}
+    
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+    }
+
+    .travelImg{position: relative; width: 100%;}
+
+    .travelImg img{width: 100%; }
+
+    .imgContainer1{grid-area: 1 / 1 / 2 / 3;}
+
+    .imgContainer2{grid-area: 3 / 1 / 5 / 2;}
+
+    .imgContainer3{grid-area: 3 / 2 / 5 / 3;}
+
+    .imgContainer4{grid-area: 2 / 1 / 3 / 2;}
+
+    .imgContainer5{grid-area: 2 / 2 / 3 / 3;}
+
+
+    .imgDesc{
+    bottom: 15px;
+    left: 15px;
+    }
+    .playM{
+        width: 250px;
+    }
+    .appS{
+        width: 200px;
+    }
+}
+
+@media(max-width:600px){
+    .content{
+        padding: 19rem 1rem 3rem;
+    }
+    
+}
+
+@media(max-width:500px){
+    
+    .imgDesc h3{
+        font-size: 16px;
+    }
+}

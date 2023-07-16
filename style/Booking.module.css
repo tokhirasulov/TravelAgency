@@ -1,0 +1,299 @@
+
+.booking{
+    background-color: white;
+    border-radius: 8px;
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 55%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 30px;
+    padding: 1.25rem 2.75rem;
+}
+
+.navBar{
+        align-items: center;
+}
+
+.line{
+    margin-top: .6rem;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+.navBar > ul{
+    display: flex;
+    list-style: none;
+    gap: 3.125rem;
+    font-size: 18px;
+    color: #888AA2;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Montserrat;
+    cursor: pointer;
+}
+
+.selected{
+    color: #1F4AA8;;
+}
+
+.choiceContainer, .radios, .navBar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.choiceContainer{
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.radios{
+    gap: 3.5rem;
+    
+}
+
+.customRadioBtn{
+    width: 24px;
+    height: 24px;
+    border: 3px solid #1F4AA8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customRadioBtn .checkmark{
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-radius: 50%;
+    background-color: #1F4AA8;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.customRadioBtn, input:checked + .checkmark{
+   opacity: 1;
+}
+
+.customRadioBtn input[type='radio']{
+    display: none;
+}
+
+.nameChoice{
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+
+.nameChoice label{
+    color: black;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+}
+
+
+.from{background: url("../public/departures\ 1.png");}
+.to{background: url('../public/to.png');}
+
+.formInp{
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    padding: .7rem 4rem;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+
+
+.formInp::placeholder {
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.inversePlane{
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 37px;
+    height: 35px;
+    cursor: pointer;
+    top: 5%;
+    right: 60%;
+    bottom: 0;
+    left: 1;
+    z-index: 1;
+}
+
+.calendar{
+    border: .5px solid black;
+    color: black;
+    padding: 0.5rem 1rem;
+    width: 15%;
+}
+
+.ticketInfo{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: .5rem;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.searchBtnDiv{
+    margin-top: 1.2rem;
+    text-align: center;
+}
+
+.searchBtn{
+    padding: 1.25rem 5.5rem;
+}
+
+
+.bookingCategory:hover{
+    transition: 0.1s ease-in;
+    color: black;
+}
+
+/* Stays Css */
+
+.staysOptions{
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.loc{
+    background: url('../public/locIcon.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: .8rem;
+    padding-left: 3rem;
+    width: 65%;
+}
+
+.pickUp{
+    width: 49%;
+}
+
+.staysSearchBtn{
+    margin-top: 1rem;
+}
+
+/* Flight */
+
+
+
+.from{
+    width: 49%;
+}
+
+.to{
+    width: 49%;
+}
+
+
+/* Cars */
+
+.carsRental{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.carsCalendar{
+    width: 24%;
+}
+
+
+@media(max-width: 992px){
+    .booking{
+        top: 40%;
+    }
+
+    .navBar >ul{
+        font-size: 14px;
+        gap: 2rem;
+    }
+
+    .ticketInfo{
+        flex-wrap: wrap;
+    }
+
+    .calendar, .staysCalendar{
+        width: 47%;
+    }
+    .loc{
+        width: 96%;
+    }
+
+    .inversePlane{
+        right: 49%;
+    }
+    
+
+    .from, .to{
+        width: 47%;
+    }
+
+
+    #oneWay,#return,#multiCity{
+        font-size: 11px;
+    }
+
+    
+}
+
+@media(max-width:768px){
+    .booking{
+        padding: 1rem 1.7rem;
+    }
+    .staysOptions{
+        text-align: left;
+    }
+    .packageStays{
+        margin-top: 15rem;
+    }
+    .radios{
+        font-size: 14px;
+    }
+    .inversePlane{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media(max-width: 570px){
+    .booking{
+        width: 100%;
+    }
+    
+    .navBar{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width:460px){
+    .navBar >ul{
+        font-size: 10px;
+    }
+    .searchBtn{
+        width: 100%;
+        padding: .5rem ;
+    }
+    .radios{
+        font-size: 10px;
+    }
+}

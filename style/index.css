@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat;
+    color: white;
+}
+
+.defaultBtn{
+    background-color: #1F4AA8;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 39px;
+    cursor: pointer;
+    font-family: Montserrat;
+}
+
+.defaultBtn:hover{
+background-color: #1f4aa8;
+box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+oultine-color: rgba(255, 255, 255, 0);
+outline-offset: 15px;
+text-shadow: 1px 1px 2px #427388; 
+}
+
+.defautlBtn:active{
+box-shadow: 2px 0px 29px -3px rgba(0,0,0,0.23) inset;
+-webkit-box-shadow: 2px 0px 29px -3px rgba(0,0,0,0.23) inset;
+-moz-box-shadow: 2px 0px 29px -3px rgba(0,0,0,0.23) inset;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.selected{
+    color: #1F4AA8;
+}
+
