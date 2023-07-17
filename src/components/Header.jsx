@@ -1,5 +1,6 @@
 import style from '../../style/Header.module.css'
 import { Dropdown, Space } from 'antd';
+import logo from '../../public/logo.png'
 
 const Header = () => {
     const items = [
@@ -28,7 +29,7 @@ const Header = () => {
         <div className={style.hero}>
             <header >
                 <nav className={style.headerNav}>
-                    <img src="../../public/logo.png" alt="LogoType of Expedia"  className={style.logo}/>
+                    <img src={logo} alt="LogoType of Expedia"  className={style.logo}/>
                     <ul>
                         <li className='bold'>Home</li>
                         <li>Trips</li>

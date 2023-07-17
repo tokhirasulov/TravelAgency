@@ -1,5 +1,8 @@
 import style from '../../style/Footer.module.css'
-
+import logo from "../../public/logo.png"
+import instagram from "../../public/instagram"
+import twitter from "../../public/twitter"
+import linkedin from "../../public/linkedin"
 
 const Footer = () => {
     const footFeat = ['About us', 'Jobs', 'List your property', 'Partnership', 'Advertising']
@@ -8,7 +11,7 @@ const Footer = () => {
         <footer>
             <div className={style.footHeader}>
                 <div className={style.rights}>
-                    <img src="../../public/logo.png" alt="" />
+                    <img src={logo} alt="Logotype" />
                     <p className={style.copyRight}>© 2021 Expedia, Inc., an Expedia Group company. All rights reserved. </p>
                 </div>
                 <div  className={style.footContain}>
@@ -35,9 +38,9 @@ const Footer = () => {
                         <a href='#'><p>We’d love to hear from you</p></a>
                         </div>
                         <div className={style.icons}>
-                            <a href='https://www.instagram.com/expedia/' target='_blank'> <img src="../../public/Group-1.png" alt="Instagram" /></a>
-                            <a href='https://www.twitter.com' target='_blank'> <img src="../../public/Group-2.png" alt="Twitter" /></a>
-                            <a href='https://www.linkedin.com/in/expedia' target='_blank'> <img src="../../public/Group.png" alt="Linkedin" /></a>
+                            <a href='https://www.instagram.com/expedia/' target='_blank'> <img src={instagram} alt="Instagram" /></a>
+                            <a href='https://www.twitter.com' target='_blank'> <img src={twitter} alt="Twitter" /></a>
+                            <a href='https://www.linkedin.com/in/expedia' target='_blank'> <img src={linkedin} alt="Linkedin" /></a>
                         </div>
                     </div>
                 </div>

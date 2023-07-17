@@ -14,13 +14,7 @@ const BookingMenu = () => {
     const cars = document.getElementById('cars')
     const packages = document.getElementById('packages')
     const things = document.getElementById('thingsToDo')
-    const [data, setData] = useState()
-    const url = 'https://partners.api.skyscanner.net/apiservices/schedule/v1.0/US/SFO/LAX/2022-01-01/?apiKey=sh428739766321522266746152871799'
-    useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(result => console.log(result))
-    },[])
+
 
     function handleChange(e){
         if(e.target.id == 'stays'){
