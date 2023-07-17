@@ -1,8 +1,8 @@
 import style from '../../style/Footer.module.css'
 import logo from "../../public/logo.png"
-import instagram from "../../public/instagram"
-import twitter from "../../public/twitter"
-import linkedin from "../../public/linkedin"
+import instagram from "../../public/instagram.png"
+import twitter from "../../public/twitter.png"
+import linkedin from "../../public/linkedin.png"
 
 const Footer = () => {
     const footFeat = ['About us', 'Jobs', 'List your property', 'Partnership', 'Advertising']
