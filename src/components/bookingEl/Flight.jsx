@@ -83,25 +83,26 @@ function Flight() {
                 </div>
 
                 <div className={style.ticketInfo}>
+                    <div className={style.origDes}>
                         <input type="text"  autoComplete='off'
                         className={`${style.from} ${style.formInp}`} 
                         placeholder='from' name='origin' id='origin' value={form.origin} onChange={handleChange}/>
+                        <button onClick={changeDestination}  className={style.inversePlane}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <g clipPath="url(#clip0_11_61)">
+                                <path d="M15.6653 4.4758L12.6814 1.49193M15.6653 4.4758H2.2379H15.6653ZM15.6653 4.4758L12.6814 7.45967L15.6653 4.4758Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M2.2379 13.4274L5.22177 10.4435M2.2379 13.4274H15.6653H2.2379ZM2.2379 13.4274L5.22177 16.4113L2.2379 13.4274Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_11_61">
+                                <rect width="17.9032" height="17.9032" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        </button>
                         <input type="text"  className={`${style.to} ${style.formInp}`} autoComplete='off'
                         placeholder='to' id='destination' value={form.destination} onChange={handleChange} name='destination'/>
-                    <button onClick={changeDestination}  className={style.inversePlane}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <g clipPath="url(#clip0_11_61)">
-                            <path d="M15.6653 4.4758L12.6814 1.49193M15.6653 4.4758H2.2379H15.6653ZM15.6653 4.4758L12.6814 7.45967L15.6653 4.4758Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M2.2379 13.4274L5.22177 10.4435M2.2379 13.4274H15.6653H2.2379ZM2.2379 13.4274L5.22177 16.4113L2.2379 13.4274Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_11_61">
-                            <rect width="17.9032" height="17.9032" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    </button>
-                    
+                    </div>
 
                     {<DatePicker className={`${style.calendar} ${style.flightCalendar}`} placeholder='Departing' id='going'
                         

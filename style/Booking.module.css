@@ -121,18 +121,23 @@
 }
 
 .inversePlane{
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     border: 1px solid black;
     border-radius: 50%;
     width: 37px;
-    height: 35px;
+    height: 37px;
     cursor: pointer;
-    top: 5%;
-    right: 60%;
-    bottom: 0;
-    left: 1;
     z-index: 1;
+}
+
+.origDes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
 }
 
 .calendar{
@@ -196,11 +201,11 @@
 
 
 .from{
-    width: 49%;
+    width: 46%;
 }
 
 .to{
-    width: 49%;
+    width: 46%;
 }
 
 
@@ -244,7 +249,7 @@
     
 
     .from, .to{
-        width: 47%;
+        width: 45%;
     }
 
 
@@ -276,12 +281,20 @@
 
 @media(max-width: 570px){
     .booking{
-        width: 100%;
+        width: 95%;
     }
     
     .navBar{
         display: flex;
         justify-content: center;
+    }
+    .from, .to{
+        width: 44%;
+    }
+
+    .origDes{
+        display: flex;
+        gap: .2rem;
     }
 }
 
