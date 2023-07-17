@@ -5,6 +5,24 @@ import {useState} from 'react';
 function Flight() {
     const travellersN = ['1 traveler', '2 travelers', '3 travelers', '4 travelers', '5 travelers', '6 travelers']
     const classes = ['Economy', 'Premium Economy', 'Business class', 'First class']
+    const [form, setForm] = useState({
+        origin: '',
+        destination: '',
+    })
+    
+    function handleChange(e){
+        console.log(e)
+        const {name, value, type} = e.target
+
+        setForm(prevForm => {
+            return{
+                ...prevForm,
+                [name]: value
+            }
+        })
+    }
+
+
 
     function changeDestination(e){
         e.preventDefault()
@@ -12,12 +30,11 @@ function Flight() {
         document.getElementById('origin').value = document.getElementById('destination').value
         document.getElementById('destination').value = a
 
-        console.log('clicked')
     }
 
     return (
         <>
-            <form>
+            <form action={`https://www.aviasales.com/?params=${form.origin}${form.destination}`}>
                 <div className={style.choiceContainer}>
                     <div className={style.radios}>
                         <div className={style.nameChoice} >
@@ -66,8 +83,11 @@ function Flight() {
                 </div>
 
                 <div className={style.ticketInfo}>
-                        <input type="text"  className={`${style.from} ${style.formInp}`} placeholder='from' id='origin'/>
-                        <input type="text"  className={`${style.to} ${style.formInp}`} placeholder='to' id='destination'/>
+                        <input type="text"  autoComplete='off'
+                        className={`${style.from} ${style.formInp}`} 
+                        placeholder='from' name='origin' id='origin' value={form.origin} onChange={handleChange}/>
+                        <input type="text"  className={`${style.to} ${style.formInp}`} autoComplete='off'
+                        placeholder='to' id='destination' value={form.destination} onChange={handleChange} name='destination'/>
                     <button onClick={changeDestination}  className={style.inversePlane}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                         <g clipPath="url(#clip0_11_61)">
@@ -83,7 +103,8 @@ function Flight() {
                     </button>
                     
 
-                    <DatePicker className={`${style.calendar} ${style.flightCalendar}`} placeholder='Departing'
+                    {<DatePicker className={`${style.calendar} ${style.flightCalendar}`} placeholder='Departing' id='going'
+                        
                         cellRender={(current) => {
                             const style = {};
                             if (current.date() === 1) {
@@ -96,8 +117,9 @@ function Flight() {
                             </div>
                             );
                         }}
-                        />
+                        />}
                         <DatePicker placeholder='Returning' className={`${style.calendar} ${style.flightCalendar}`} id='returnId'
+                        
                         cellRender={(current) => {
                             const style = {};
                             if (current.date() === 1) {
@@ -112,7 +134,7 @@ function Flight() {
                         }}/>
                 </div>
                 <div className={style.searchBtnDiv}>
-                <button className={`defaultBtn ${style.searchBtn}`}>Search</button>
+                <button className={`defaultBtn ${style.searchBtn}`} onClick={(e) => e.preventDefault}>Search</button>
                 </div>
             </form>
         </>

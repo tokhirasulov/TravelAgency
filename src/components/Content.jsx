@@ -20,7 +20,7 @@ const Content = () => {
                     </div>
                 </div>
                 <div className={`${style.imgContainer3} ${style.travelImg}`}>
-                    <img src="../../public/indonesia.png" alt="Picture of the Indonesia" />
+                    <img src="../../public/indonesia.webp" alt="Picture of the Indonesia" />
                     <div className={style.imgDesc}>
                         <h3>Ubud</h3>
                         <p>Bali, <br />Indonesia</p>
